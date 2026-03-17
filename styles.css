@@ -109,9 +109,6 @@ body.mouse-active .mouse-spotlight {
 .card ul { margin: 0.6rem 0 0; }
 
 .project {
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 1rem;
   padding: 0.8rem;
   border-radius: 12px;
   border: 1px solid var(--border);
@@ -119,9 +116,42 @@ body.mouse-active .mouse-spotlight {
   margin-bottom: 0.9rem;
   transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
 }
+.project summary {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1rem;
+  align-items: start;
+  list-style: none;
+  cursor: pointer;
+}
+
+.project summary::-webkit-details-marker {
+  display: none;
+}
+
 .project img { width: 100%; border-radius: 8px; border: 1px solid var(--border); }
 .project h3 { margin: 0; }
 .stack { color: var(--accent); font-weight: 600; }
+.project-hint {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.project-details {
+  margin-top: 0.7rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--border);
+}
+
+.project[open] {
+  border-color: rgba(68, 255, 199, 0.45);
+  background: rgba(15, 36, 29, 0.88);
+}
+
+.project[open] .project-hint {
+  color: var(--accent);
+}
 
 
 .experience-card {
@@ -192,5 +222,5 @@ body.mouse-active .mouse-spotlight {
   .left { position: static; height: auto; padding-bottom: 0; }
   .right { padding-top: 1.3rem; }
   .section-nav { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .project { grid-template-columns: 1fr; }
+  .project summary { grid-template-columns: 1fr; }
 }
