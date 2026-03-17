@@ -26,3 +26,16 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach((section) => observer.observe(section));
+
+
+const mouseSpotlight = document.querySelector('.mouse-spotlight');
+if (mouseSpotlight) {
+  const updateSpotlight = (event) => {
+    document.body.classList.add('mouse-active');
+    document.documentElement.style.setProperty('--mouse-x', `${event.clientX}px`);
+    document.documentElement.style.setProperty('--mouse-y', `${event.clientY}px`);
+  };
+
+  window.addEventListener('pointermove', updateSpotlight);
+  window.addEventListener('pointerdown', updateSpotlight);
+}
