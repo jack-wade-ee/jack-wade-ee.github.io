@@ -21,7 +21,7 @@ body {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: 5;
   opacity: 0;
   transition: opacity 220ms ease;
   background: radial-gradient(
@@ -125,38 +125,27 @@ body.mouse-active .mouse-spotlight {
 
 
 .experience-card {
-  position: relative;
+  display: block;
   width: 100%;
+  color: inherit;
+  text-decoration: none;
   cursor: pointer;
-}
-
-.experience-card > * {
-  position: relative;
-  z-index: 2;
-}
-
-.experience-card .card-link {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  border-radius: inherit;
 }
 
 .experience-card p {
   margin: 0.75rem 0 0;
 }
 
-.experience-card .card-link:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-
 .experience-card:hover,
-.experience-card:focus-within {
+.experience-card:focus-visible {
   transform: translateY(-4px);
   border-color: rgba(68, 255, 199, 0.45);
   background: rgba(15, 36, 29, 0.88);
+}
+
+.experience-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .contact a {
