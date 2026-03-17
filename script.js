@@ -1,6 +1,6 @@
 const copyrightTarget = document.querySelector('[data-copyright]');
 if (copyrightTarget) {
-  copyrightTarget.textContent = `© ${new Date().getFullYear()} Alex Morgan. All rights reserved.`;
+  copyrightTarget.textContent = `© ${new Date().getFullYear()} Jack Wade. All rights reserved.`;
 }
 
 const sectionLinks = document.querySelectorAll('[data-link]');
