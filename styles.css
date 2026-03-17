@@ -103,9 +103,9 @@ body.mouse-active .mouse-spotlight {
   margin-bottom: 0.9rem;
   transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
 }
-.card header { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; }
-.card h3 { margin: 0; font-size: 1rem; }
-.card span { color: var(--muted); font-size: 0.85rem; }
+.card header { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; flex-wrap: wrap; }
+.card h3 { margin: 0; font-size: 1rem; flex: 1 1 16rem; min-width: 0; }
+.card span { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
 .card ul { margin: 0.6rem 0 0; }
 
 .project {
@@ -126,8 +126,13 @@ body.mouse-active .mouse-spotlight {
 
 .experience-card {
   display: block;
+  width: 100%;
   color: inherit;
   text-decoration: none;
+}
+
+.experience-card p {
+  margin: 0.75rem 0 0;
 }
 
 .experience-card:hover,
