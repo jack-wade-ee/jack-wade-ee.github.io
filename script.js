@@ -26,7 +26,7 @@ const updateActiveFromScrollBounds = () => {
   }
 
   if (atBottom) {
-    setActive('contact');
+    setActive(sections.at(-1)?.id);
     return;
   }
 
