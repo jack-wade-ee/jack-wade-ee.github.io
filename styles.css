@@ -93,9 +93,10 @@ body.mouse-active .mouse-spotlight {
 .section h2 { margin-top: 0; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
 .section p {
   color: #bfebdc;
-  hyphens: auto;
+  hyphens: none;
   text-align: justify;
   text-align-last: left;
+  text-justify: inter-word;
 }
 
 .card {
