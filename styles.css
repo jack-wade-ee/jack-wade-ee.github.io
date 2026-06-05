@@ -88,12 +88,16 @@ body.mouse-active .mouse-spotlight {
   border-left-color: var(--accent);
 }
 
-.meta { list-style: none; margin: 1.2rem 0 0; padding: 0; color: var(--muted); display: grid; gap: 0.25rem; }
-
 .right { padding: 4rem 0 5rem; }
 .section { margin-bottom: 3.4rem; }
 .section h2 { margin-top: 0; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
-.section p { color: #bfebdc; }
+.section p {
+  color: #bfebdc;
+  hyphens: none;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+}
 
 .card {
   background: rgba(15, 36, 29, 0.75);
@@ -107,6 +111,15 @@ body.mouse-active .mouse-spotlight {
 .card h3 { margin: 0; font-size: 1rem; flex: 1 1 16rem; min-width: 0; }
 .card span { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
 .card ul { margin: 0.6rem 0 0; }
+.competency-list {
+  column-count: 2;
+  column-gap: 2rem;
+  padding-left: 1.1rem;
+}
+.competency-list li {
+  break-inside: avoid;
+  margin-bottom: 0.35rem;
+}
 
 .project {
   padding: 0.8rem;
@@ -131,11 +144,16 @@ body.mouse-active .mouse-spotlight {
 
 .project img { width: 100%; border-radius: 8px; border: 1px solid var(--border); }
 .project h3 { margin: 0; }
-.stack { color: var(--accent); font-weight: 600; }
+.stack {
+  color: var(--accent);
+  font-weight: 600;
+  text-align: left;
+}
 .project-hint {
   margin: 0.5rem 0 0;
   color: var(--muted);
   font-size: 0.85rem;
+  text-align: left;
 }
 
 .project-details {
@@ -204,6 +222,35 @@ body.mouse-active .mouse-spotlight {
   padding: 0.65rem 1rem;
   border-radius: 999px;
 }
+
+.side-contact {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin-top: 1.4rem;
+  max-width: 26rem;
+}
+
+.side-contact h2 {
+  color: var(--accent);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.6rem;
+  text-transform: uppercase;
+}
+
+.side-contact p {
+  margin: 0.45rem 0;
+}
+
+.side-contact .cta {
+  cursor: default;
+  font-size: 0.82rem;
+  margin: 0.35rem 0 0.5rem;
+  padding: 0.45rem 0.75rem;
+  user-select: text;
+}
+
 .copyright { color: var(--muted); margin-top: 1rem; }
 
 
@@ -221,6 +268,13 @@ body.mouse-active .mouse-spotlight {
   .layout { grid-template-columns: 1fr; }
   .left { position: static; height: auto; padding-bottom: 0; }
   .right { padding-top: 1.3rem; }
-  .section-nav { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .section-nav { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-bottom: 1.4rem; }
+  .side-contact { margin-top: 0; }
   .project summary { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .competency-list {
+    column-count: 1;
+  }
 }
