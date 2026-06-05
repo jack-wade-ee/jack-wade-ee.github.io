@@ -91,7 +91,12 @@ body.mouse-active .mouse-spotlight {
 .right { padding: 4rem 0 5rem; }
 .section { margin-bottom: 3.4rem; }
 .section h2 { margin-top: 0; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
-.section p { color: #bfebdc; }
+.section p {
+  color: #bfebdc;
+  hyphens: auto;
+  text-align: justify;
+  text-align-last: left;
+}
 
 .card {
   background: rgba(15, 36, 29, 0.75);
@@ -138,11 +143,16 @@ body.mouse-active .mouse-spotlight {
 
 .project img { width: 100%; border-radius: 8px; border: 1px solid var(--border); }
 .project h3 { margin: 0; }
-.stack { color: var(--accent); font-weight: 600; }
+.stack {
+  color: var(--accent);
+  font-weight: 600;
+  text-align: left;
+}
 .project-hint {
   margin: 0.5rem 0 0;
   color: var(--muted);
   font-size: 0.85rem;
+  text-align: left;
 }
 
 .project-details {
